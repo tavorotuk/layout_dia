@@ -1,19 +1,122 @@
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  class="page"
+>
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Dia</title>
+    <title>Air</title>
     <link
       rel="stylesheet"
       href="./styles/main.scss"
     />
   </head>
-  <body>
-    <h1>Dia</h1>
+  <body class="page__body">
+    <header class="header header--small page__header">
+      <div class="container">
+        <div class="header__top-bar">
+          <div>
+            <a
+              href="#"
+              class="header__logo-link"
+            >
+              <img
+                src="/src/images/air-logo.svg"
+                alt="Air Logo"
+                class="header__logo-img"
+              />
+            </a>
+            <a
+              href="#"
+              class="header__menu-link"
+            ></a>
+          </div>
+          <a
+            href="#"
+            class="header__hire-us"
+          >
+            hire us
+          </a>
+        </div>
+
+        <div class="header__content">
+          <h1 class="header__title">Strategic Agency</h1>
+          <p class="header__text">
+            We believe in the power of bold ideas that can solve business
+            challenges.
+          </p>
+          <a
+            href="#"
+            class="header__button"
+          >
+            Learn more
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page__main">
+      <section class="about-us">
+        <div class="container">
+          <h1 class="about-us__title">Who we are</h1>
+          <p class="about-us__text">
+            We embrace a strategic approach to creative ideas. We are interested
+            in people and human relationships. This is the main thing you need
+            to know about us. We believe in the power of bold ideas that can
+            solve business challenges.
+          </p>
+        </div>
+      </section>
+
+      <section class="expertise">
+        <div class="container">
+          <h1 class="expertise__title">Our expertise</h1>
+          <div class="expertise__wrapper">
+            <article class="expertise__item item-1">
+              <img
+                src="/src/images/expertise/branding.png"
+                alt="Branding"
+                class="expertise__item-img"
+              />
+              <h2 class="expertise__item-title">Branding</h2>
+              <p class="expertise__item-text">
+                We create additional value for companies, products, services as
+                well as verbal and visual ways to deliver it to the audience.
+              </p>
+            </article>
+            <article class="expertise__item item-2">
+              <img
+                src="/src/images/expertise/branding.png"
+                alt="Branding"
+                class="expertise__item-img"
+              />
+              <h2 class="expertise__item-title">Branding</h2>
+              <p class="expertise__item-text">
+                We create additional value for companies, products, services as
+                well as verbal and visual ways to deliver it to the audience.
+              </p>
+            </article>
+            <article class="expertise__item item-3">
+              <img
+                src="/src/images/expertise/branding.png"
+                alt="Branding"
+                class="expertise__item-img"
+              />
+              <h2 class="expertise__item-title">Branding</h2>
+              <p class="expertise__item-text">
+                We create additional value for companies, products, services as
+                well as verbal and visual ways to deliver it to the audience.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script src="scripts/main.js"></script>
   </body>
 </html>
