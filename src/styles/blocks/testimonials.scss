@@ -1,3 +1,162 @@
 .testimonials {
   margin-top: 120px;
+
+  &__subtitle {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-top: 16px;
+
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 150%;
+
+    &-break {
+      display: inline;
+
+      @include on-tablet {
+        display: block;
+      }
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    padding: 32px 42px;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0px 9px 18px 0px #25293108;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &-avatar-wrapper {
+      width: 196px;
+      height: 196px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 109px;
+        height: 44px;
+        background-color: #2060F6;
+        border-radius: 12px;
+      }
+      &::before {
+        transform: rotate(-60deg) translate(10%, -110%);
+      }
+
+      &::after {
+        transform: rotate(-60deg) translate(-10%, 110%);
+      }
+    }
+
+    &-avatar {
+      z-index: 2;
+    }
+
+
+    &-quotes-icon {
+      margin-top: 24px;
+
+      content: '';
+      display: block;
+      background-image: url(/src/images/quotes.svg);
+      width: 24px;
+      height: 24px;
+    }
+
+    &-text {
+      margin-top: 8px;
+
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 150%;
+
+      max-width: 360px;
+    }
+
+    &-name {
+      margin-top: 16px;
+
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 150%;
+      color: #253757;
+    }
+
+    &-activities {
+      margin-top: 4px;
+
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #C0CDD7;
+    }
+  }
+}
+
+.testimonials__wrapper {
+  @include page-grid;
+  row-gap: 24px;
+  margin-top: 48px;
+
+  @include on-tablet {
+    row-gap: 30px;
+    margin-top: 56px
+  }
+
+  @include on-desktop {
+      margin-top: 85px;
+    }
+
+  &-1-item {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / 7;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / 5;
+    }
+  }
+
+  &-2-item {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / -1;
+    }
+
+    @include on-desktop {
+      grid-column: 5 / 9;
+    }
+  }
+
+  &-3-item {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / -1;
+    }
+
+    @include on-desktop {
+      grid-column: 9 / 13;
+    }
+  }
 }
