@@ -1,5 +1,11 @@
 // phone-tablet version
 .header--small {
+  display: block;
+
+  @include on-desktop {
+    display: none;
+  }
+
   .header {
     &__top-bar {
       display: flex;
@@ -102,4 +108,109 @@
 // large monitors version
 .header--large {
   display: none;
+
+  .container {
+    position: relative;
+    height: 100vh;
+  }
+
+  @include on-desktop {
+    display: block;
+  }
+
+  .header {
+    @include on-desktop {
+      &__nav {
+      padding-top: 52px;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &-logo-link {
+      display: inline-block;
+      }
+
+      &-logo-img {
+        display: block;
+      }
+
+      &-links {
+        display: flex;
+        gap: 48px;
+        margin: 0;
+
+        .nav--li {
+          list-style: none;
+        }
+
+        .nav--a {
+          font-family: Poppins, sans-serif;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 150%;
+          letter-spacing: 3px;
+        }
+      }
+
+      &-hire-us {
+      transform: translateY(5px);
+      font-family: Poppins, sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 150%;
+      letter-spacing: 3px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-top: 8px;
+        background-color: #2060f6;
+      }
+    }
+    }
+
+      &__content {
+        display: inline-block;
+        margin-top: 164px;
+      }
+
+      &__title {
+        font-size: 64px;
+        line-height: 68px;
+        letter-spacing: -2px;
+      }
+
+      &__text {
+        margin-top: 32px;
+
+        font-size: 18px;
+        line-height: 150%;
+
+        width: 362px;
+      }
+
+      &__button {
+        margin-top: 83px;
+
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background-color: #2060f6;
+        border-radius: 8px;
+
+        width: 264px;
+      }
+    }
+  }
 }

@@ -87,8 +87,10 @@
   }
 }
 
+
 .services__wrapper {
   @include page-grid;
+
   grid-template-rows: repeat(4, 1fr);
   row-gap: 24px;
 
@@ -149,7 +151,6 @@
     }
   }
 }
-
 
 .services {
   .container {
