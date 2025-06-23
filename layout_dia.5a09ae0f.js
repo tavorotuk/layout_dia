@@ -1,0 +1,2 @@
+"use strict";document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector(".send-message__form"),t=e.querySelectorAll("input, textarea");t.forEach(e=>{e.addEventListener("input",()=>{""!==e.value.trim()?e.classList.add("filled"):e.classList.remove("filled")})}),e.addEventListener("submit",s=>{s.preventDefault(),e.reset(),t.forEach(e=>{e.classList.remove("filled")})})});
+//# sourceMappingURL=layout_dia.5a09ae0f.js.map
