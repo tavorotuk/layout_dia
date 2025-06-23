@@ -1,4 +1,3 @@
-// phone-tablet version
 .header--small {
   display: block;
 
@@ -21,6 +20,8 @@
 
     &__logo-img {
       display: block;
+
+      @include logo-hover;
     }
 
     &__menu-link {
@@ -47,7 +48,7 @@
         width: 100%;
         height: 2px;
         margin-top: 8px;
-        background-color: #2060f6;
+        background-color: $additional-page-color;
       }
     }
 
@@ -94,8 +95,11 @@
 
       width: 100%;
       height: 50px;
-      background-color: #2060f6;
+      background-color: $additional-page-color;
+      color: $header-text-color;
       border-radius: 8px;
+
+      @include button-hover($bh-header-color, $bh-header-bg-color);
 
       @include on-tablet {
         margin-top: 56px;
@@ -105,75 +109,78 @@
   }
 }
 
-// large monitors version
 .header--large {
   display: none;
-
-  .container {
-    position: relative;
-    height: 100vh;
-  }
 
   @include on-desktop {
     display: block;
   }
 
+  border-bottom-left-radius: 30px;
+
   .header {
     @include on-desktop {
       &__nav {
-      padding-top: 52px;
+        padding-top: 52px;
 
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-
-      &-logo-link {
-      display: inline-block;
-      }
-
-      &-logo-img {
-        display: block;
-      }
-
-      &-links {
         display: flex;
-        gap: 48px;
-        margin: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
-        .nav--li {
-          list-style: none;
+        &-logo-link {
+          display: inline-block;
         }
 
-        .nav--a {
+        &-logo-img {
+          display: block;
+
+          @include logo-hover;
+        }
+
+        &-links {
+          display: flex;
+          gap: 48px;
+          margin: 0;
+
+          .nav--li {
+            list-style: none;
+          }
+
+          .nav--a {
+            display: inline-block;
+            height: 29.5px;
+            font-family: Poppins, sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 29.5px;
+            letter-spacing: 3px;
+
+            @include nav-links-hover;
+          }
+        }
+
+        &-hire-us {
+          display: inline-block;
+          height: 29.5px;
           font-family: Poppins, sans-serif;
           text-transform: uppercase;
           font-weight: 700;
           font-size: 13px;
-          line-height: 150%;
+          line-height: 29.5px;
           letter-spacing: 3px;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            margin-top: 8px;
+            background-color: #2060f6;
+          }
         }
       }
-
-      &-hire-us {
-      transform: translateY(5px);
-      font-family: Poppins, sans-serif;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 150%;
-      letter-spacing: 3px;
-
-      &::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 2px;
-        margin-top: 8px;
-        background-color: #2060f6;
-      }
-    }
-    }
 
       &__content {
         display: inline-block;
@@ -210,6 +217,8 @@
         border-radius: 8px;
 
         width: 264px;
+
+        @include button-hover($bh-header-color, $bh-header-bg-color);
       }
     }
   }

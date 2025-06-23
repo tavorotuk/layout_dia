@@ -1,11 +1,13 @@
 .contacts {
   padding-top: 72px;
+  margin-top: 120px;
 
   @include on-tablet {
     padding-top: 180px;
+    margin-top: 0;
   }
 
-  background-color: #2C2C2C;
+  background-color: $header-background-color;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
@@ -62,24 +64,24 @@
         max-width: 264px;
       }
 
-      cursor: pointer;
+      @include button-hover($bh-form-color, $bh-form-bg-color);
 
+      cursor: pointer;
       height: 56px;
 
-      background-color: #2060F6;
+      background-color: $contacts-hover-color;
       border: none;
       border-radius: 8px;
 
       font-family: Poppins, sans-serif;
       font-weight: 600;
       font-size: 15px;
-      color: #fff;
+      color: $header-text-color;
     }
   }
 }
 
 .contact-us {
-  margin-bottom: 80px; // to delete
   margin-top: 80px;
 
   @include on-tablet {
@@ -97,6 +99,10 @@
     text-transform: uppercase;
   }
 
+  &__link {
+    display: inline-block;
+  }
+
   &__text {
     margin-top: 8px;
 
@@ -112,6 +118,8 @@
         display: inline;
       }
     }
+
+    @include contacts-link-hover;
   }
 
   &__call {
@@ -133,26 +141,27 @@
       gap: 32px;
 
       .facebook-icon {
-        @include socials-icon;
-
         background-image: url(/src/images/icons/facebook.svg);
+
+        @include contacts-icon-hover('facebook');
       }
 
       .twitter-icon {
-        @include socials-icon;
-
         background-image: url(/src/images/icons/twitter.svg);
+
+        @include contacts-icon-hover('twitter');
       }
 
       .instagram-icon {
-        @include socials-icon;
-
         background-image: url(/src/images/icons/instagram.svg);
+
+        @include contacts-icon-hover('instagram');
       }
     }
   }
 }
 
+// grid
 .contacts__wrapper {
   @include page-grid;
 

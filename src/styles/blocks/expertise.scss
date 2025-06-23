@@ -26,9 +26,14 @@
       color: #253757;
     }
 
+    // &-link {
+    // }
+
     &-img {
       width: 166px;
       height: 166px;
+
+      @include expertise-image-hover;
     }
 
     &-title {
@@ -41,6 +46,7 @@
   }
 }
 
+// grid
 .expertise__wrapper {
   @include page-grid;
 

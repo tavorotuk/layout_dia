@@ -6,7 +6,7 @@
   }
 
   @include on-desktop {
-    margin-top: 186px;;
+    margin-top: 186px;
   }
 
   padding: 72px 0;
@@ -68,12 +68,14 @@
     width: 100%;
     height: 56px;
 
-    background-color: #2060F6;
+    background-color: $additional-page-color;
     border-radius: 8px;
 
+    @include button-hover($bh-apply-color, $bh-apply-bg-color);
+
+    color: #fff;
     &-text {
       font-size: 15px;
-      color: #fff;
     }
   }
 }
